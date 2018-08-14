@@ -6,3 +6,24 @@
 # Create two instances of the Clothes class.
 # Print to the console the entire @@closet array using the class method you wrote.
 
+class Clothes
+
+  attr_accessor :clothing
+
+  @@closet = []
+
+  def initialize(clothing)
+    @clothing = clothing
+    @@closet << clothing
+  end
+
+  def self.closetAll
+    @@closet
+  end
+
+end
+
+clothing1 = Clothes.new("Shirts")
+clothing2 = Clothes.new("Pants")
+
+puts Clothes.closetAll
